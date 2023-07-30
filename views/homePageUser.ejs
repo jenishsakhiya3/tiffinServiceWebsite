@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        :root{
+            --ob-color:rgb(165, 164, 164);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        nav {
+            height: 70px;
+            width: 100%;
+            background: rgba(247, 254, 155, 0.808);
+        }
+
+        label.logo {
+            color: black;
+            font-weight: bold;
+            font-size: 35px;
+            line-height: 70px;
+            padding: 0 100px;
+            font-family: 'Kalam', cursive;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 80px;
+            font-weight: bold;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 5px;
+            line-height: 70px;
+        }
+
+        nav ul li a {
+            color: rgba(0, 0, 0, 0.669);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 17px;
+            padding: 7px 14px;
+            border-radius: 3px;
+        }
+
+        a:active,
+        a:hover {
+            background: rgb(246, 254, 134);
+            color: black;
+        }
+
+        .checkbtn {
+            font-size: 30px;
+            color: black;
+            float: right;
+            line-height: 70px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        @media(max-width:1067px) {
+            label.logo {
+                font-size: 30px;
+                padding-left: 50px;
+            }
+
+            nav ul li a {
+                font-size: 16px
+            }
+        }
+
+        @media(max-width: 972px) {
+            .checkbtn {
+                display: block;
+            }
+
+            nav ul {
+                position: absolute;
+                height: 100vh;
+                width: 100%;
+                left: -100%;
+                background: #2c3e50;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            nav ul li {
+                display: block;
+            }
+
+            nav ul li a {
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+            a.active,
+
+            #check:checked~ul {
+                left: 0;
+            }
+        }
+        .search {
+            width: 100%;
+            position: relative;
+            display: flex;
+        }
+
+        .searchTerm {
+            width: 100%;
+            border: 3px solid var(--ob-color);
+            padding: 5px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            color: #9ba9a3;
+        }
+
+        .searchTerm:focus {
+            color: black;
+        }
+
+        .searchButton {
+            width: 40px;
+            height: 37px;
+            border: 1px solid var(--ob-color);
+            background:var(--ob-color);
+            text-align: center;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+
+        .card {
+            width: 290px;
+            height: 354px;
+            border-radius: 30px;
+            background: #f8f6f6;
+            box-shadow: 15px 15px 30px #bebebe,
+                -15px -15px 30px #ffffff;
+            margin-top: 150px;
+        }
+        .cards{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .card img{
+            width: 290px;
+            height: 354px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">tiFFin</label>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="homePageUser">Home</a></li>
+            <li><a href="restaurantPage">Restaurant</a></li>
+            <li><a href="foodPage">Food</a></li>
+            <li><a href="servicePage">My Orders</a></li>
+        </ul>
+    </nav>
+    <div class="cards">
+        <div class="card">
+            <img src="tiffin-service-man-vector-34407013.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="tiffin-service-man-vector-34408340.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="tiffin-service-man-vector-34406717.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="tiffin-service-man-vector-34407079.jpg" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>
